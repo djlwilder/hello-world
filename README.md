@@ -1,3 +1,2 @@
 # hello-world
-just another repo
-fobar
+Just a test of travis on ppc64le! 
