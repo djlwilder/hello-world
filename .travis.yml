@@ -1,0 +1,20 @@
+language: bash
+
+os:
+  - linux
+  - linux-ppc64le
+
+before_install:
+   - BUILDARCH=$(uname -m)
+   - if [[ "$TRAVIS_OS_NAME" == "linux-ppc64le" ]]; then
+       ARCH="ppc64le";
+     fi
+   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
+       ARCH="amd64";
+     fi
+
+script:
+    - uname -a
+    - echo ARCH = $ARCH
+    - echo BUILDARCH = $BUILDARCH
+    - echo TRAVIS_OS_NAME = $TRAVIS_OS_NAME
