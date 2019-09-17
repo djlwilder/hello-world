@@ -11,7 +11,7 @@ env:
 matrix:
   include:
     - os: linux-ppc64le
-    - env: TESTSUITE=3
+      env: TESTSUITE=3
 
 
 before_install:
