@@ -12,6 +12,7 @@ matrix:
   include:
     - os: linux-ppc64
       env: TESTSUITE=1
+    - os: linux-ppc64
       env: TESTSUITE=3
 
 before_install:
