@@ -2,7 +2,6 @@ language: c
 
 os:
   - linux
-  - linux-ppc64le
 
 env:
   - TESTSUITE=1
@@ -11,17 +10,9 @@ env:
 
 matrix:
   include:
-    - os: linux
-      env:
-        - TESTSUITE=4
-        - TESTSUITE=5
-        - TESTSUITE=6
-  exclude:
-    - os: linux-ppc64le
-      env:
-        - TESTSUITE=2
-        - TESTSUITE=3
-
+    - os: linux-ppc64
+      env: TESTSUITE=1
+      env: TESTSUITE=3
 
 before_install:
   - export ARCH=$(uname -m)
