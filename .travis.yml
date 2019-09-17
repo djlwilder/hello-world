@@ -17,4 +17,4 @@ before_install:
 script:
     - uname -a
     - echo ARCH = $ARCH
-    - echo Options: $*
+    - echo TESTSUITE = $TESTSUITE
