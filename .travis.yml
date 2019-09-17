@@ -12,10 +12,13 @@ env:
 matrix:
   include:
     - os: linux
-      env: TESTSUITE=4
+      env: - TESTSUITE=4
+           - TESTSUITE=5
+           - TESTSUITE=6
   exclude:
     - os: linux-ppc64le
-      env: TESTSUITE=3
+      env: - TESTSUITE=2
+           - TESTSUITE=3
 
 
 before_install:
