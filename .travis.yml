@@ -2,12 +2,17 @@ language: c
 
 os:
   - linux
-#  - linux-ppc64le
 
 env:
   - TESTSUITE=1
   - TESTSUITE=2
   - TESTSUITE=3
+
+matrix:
+  include:
+    - os: linux-ppc64le
+    - env: TESTSUITE=3
+
 
 before_install:
   - export ARCH=$(uname -m)
