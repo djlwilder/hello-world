@@ -2,6 +2,7 @@ language: c
 
 os:
   - linux
+  - linux-ppc64le
 
 env:
   - TESTSUITE=1
@@ -9,7 +10,7 @@ env:
   - TESTSUITE=3
 
 matrix:
-  include:
+  exclude:
     - os: linux-ppc64le
       env: TESTSUITE=3
 
