@@ -17,7 +17,7 @@ matrix:
     - os: osx
       compiler: clang
       env: TESTSUITE="2"
-    - os: linux-ppc64
+    - os: linux-ppc64le
       compiler: clang
       env: TESTSUITE="2"
 
