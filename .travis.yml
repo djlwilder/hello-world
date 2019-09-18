@@ -1,23 +1,17 @@
 language: c
 
-sudo: false 
-
 os:
   - linux
-  - linux-ppc64le
 
-env:
-  - TESTSUITE=1
+# before_install: ./.ci/${TRAVIS_OS_NAME}-setup.sh
 
-before_install:
-  - export ARCH=$(uname -m)
-  # canonicalized names for host architecture
-  - if [ $ARCH == x86_64 ]; then export ARCH="amd64"; fi
-  - ./.ci/${TRAVIS_OS_NAME}-setup.sh
+matrix:
+  include:
+    - os: osx
+    - os: linux-ppc64le
 
 
 script:
     - uname -a
-    - echo ARCH = $ARCH
-    - echo TESTSUITE = $TESTSUITE
-    - ls -a /
+    - echo TRAVIS_OS_NAME = $TRAVIS_OS_NAME
+    - echo TRAVIS_ARCH = $TRAVIS_ARCH
