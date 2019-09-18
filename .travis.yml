@@ -1,7 +1,6 @@
 language: c
 
 compiler:
-  - gcc
   - clang
 
 os:
@@ -16,6 +15,9 @@ env:
 matrix:
   include:
     - os: osx
+      compiler: clang
+      env: TESTSUITE="2"
+    - os: linux-ppc64
       compiler: clang
       env: TESTSUITE="2"
 
