@@ -6,18 +6,18 @@ os:
 # before_install: ./.ci/${TRAVIS_OS_NAME}-setup.sh
 
 env:
- - TEST=1
- - TEST=2
+ - TESTSUITE=1
+ - TESTSUITE=2
 
 matrix:
   include:
     - os: osx
-        env: TEST=1
-    - os: linux-ppc64le
-        env: TEST=2
-
+        env: TESTSUITE=1
+#    - os: linux-ppc64le
+#        env: TESTSUITE=2
 
 script:
     - uname -a
     - echo TRAVIS_OS_NAME = $TRAVIS_OS_NAME
     - echo TRAVIS_ARCH = $TRAVIS_ARCH
+    - echo TESTSUITE=$TESTSUITE
