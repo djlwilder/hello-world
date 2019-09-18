@@ -12,7 +12,7 @@ env:
 matrix:
   include:
     - os: osx
-        env: TESTSUITE=1
+#        env: TESTSUITE=1
 #    - os: linux-ppc64le
 #        env: TESTSUITE=2
 
