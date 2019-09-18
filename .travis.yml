@@ -11,10 +11,11 @@ before_install:
   - export ARCH=$(uname -m)
   # canonicalized names for host architecture
   - if [ $ARCH == x86_64 ]; then export ARCH="amd64"; fi
+  - ./.ci/${TRAVIS_OS_NAME}-setup.sh
+
 
 script:
     - uname -a
     - echo ARCH = $ARCH
     - echo TESTSUITE = $TESTSUITE
     - ls -a /
-    - sudo sh -c echo 1024 > /proc/sys/vm/nr_hugepages
