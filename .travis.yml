@@ -1,5 +1,9 @@
 language: c
 
+compiler:
+  - gcc
+  - clang
+
 os:
   - linux
 
@@ -12,7 +16,8 @@ env:
 matrix:
   include:
     - os: osx
-    - os: linux-ppc64le
+      compiler: clang
+      env: TESTSUITE="2"
 
 script:
     - uname -a
