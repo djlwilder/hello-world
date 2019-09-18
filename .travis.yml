@@ -6,13 +6,13 @@ os:
 # before_install: ./.ci/${TRAVIS_OS_NAME}-setup.sh
 
 env:
- - TESTSUITE=1
- - TESTSUITE=2
+ - TESTSUITE="1"
+ - TESTSUITE="2"
 
 matrix:
   include:
     - os: osx
-#        env: TESTSUITE=1
+        env: TESTSUITE="2"
 #    - os: linux-ppc64le
 #        env: TESTSUITE=2
 
