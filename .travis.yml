@@ -5,10 +5,16 @@ os:
 
 # before_install: ./.ci/${TRAVIS_OS_NAME}-setup.sh
 
+env:
+ - TEST=1
+ - TEST=2
+
 matrix:
   include:
     - os: osx
+        env: TEST=1
     - os: linux-ppc64le
+        env: TEST=2
 
 
 script:
