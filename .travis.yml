@@ -1,28 +1,17 @@
 language: c
 
 compiler:
-  - clang
+  - gcc
 
 os:
+  - linux-ppc64
   - linux
 
 # before_install: ./.ci/${TRAVIS_OS_NAME}-setup.sh
-
-env:
- - TESTSUITE="1"
- - TESTSUITE="2"
-
-matrix:
-  include:
-    - os: osx
-      compiler: clang
-      env: TESTSUITE="2"
-    - os: linux-ppc64le
-      compiler: clang
-      env: TESTSUITE="2"
 
 script:
     - uname -a
     - echo TRAVIS_OS_NAME = $TRAVIS_OS_NAME
     - echo TRAVIS_ARCH = $TRAVIS_ARCH
     - echo TESTSUITE=$TESTSUITE
+    - lscpu
