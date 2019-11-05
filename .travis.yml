@@ -3,8 +3,11 @@ language: c
 compiler:
   - gcc
 
+arch:
+  - amd64
+  - arm64
+
 os:
-  - linux-ppc64
   - linux
 
 # before_install: ./.ci/${TRAVIS_OS_NAME}-setup.sh
