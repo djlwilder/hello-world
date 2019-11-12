@@ -11,12 +11,7 @@ arch:
 os:
   - linux
 
-addons:
-  apt:
-    packages: python-pip python-setuptools
-
-
-# before_install: ./.ci/${TRAVIS_OS_NAME}-setup.sh
+before_install: ./.ci/${TRAVIS_OS_NAME}-setup.sh
 
 script:
     - uname -a
