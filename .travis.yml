@@ -11,6 +11,10 @@ arch:
 os:
   - linux
 
+addons:
+  apt:
+    packages: python-pip 
+
 
 # before_install: ./.ci/${TRAVIS_OS_NAME}-setup.sh
 
@@ -18,9 +22,6 @@ script:
     - uname -a
     - echo TRAVIS_OS_NAME = $TRAVIS_OS_NAME
     - echo TRAVIS_ARCH = $TRAVIS_ARCH
-    - echo TESTSUITE=$TESTSUITE
-    - lscpu
     - python --version
-    - curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-    - python get-pip.py
     - pip -V
+    - pip install --disable-pip-version-check six flake8 hacking
