@@ -20,3 +20,4 @@ script:
     - echo TESTSUITE=$TESTSUITE
     - lscpu
     - python --version
+    - pip -V
