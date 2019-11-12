@@ -11,6 +11,12 @@ arch:
 os:
   - linux
 
+addons:
+  apt:
+    packages:
+      - python-pip
+
+
 # before_install: ./.ci/${TRAVIS_OS_NAME}-setup.sh
 
 script:
