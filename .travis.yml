@@ -11,11 +11,6 @@ arch:
 os:
   - linux
 
-addons:
-  apt:
-    packages:
-      - python-pip
-
 
 # before_install: ./.ci/${TRAVIS_OS_NAME}-setup.sh
 
@@ -26,4 +21,6 @@ script:
     - echo TESTSUITE=$TESTSUITE
     - lscpu
     - python --version
+    - curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+    - python get-pip.py
     - pip -V
