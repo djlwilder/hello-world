@@ -22,6 +22,8 @@ script:
     - uname -a
     - echo TRAVIS_OS_NAME = $TRAVIS_OS_NAME
     - echo TRAVIS_ARCH = $TRAVIS_ARCH
+    - whereis python
+    - whereis pip
     - python --version
     - pip -V
     - pip install --disable-pip-version-check six flake8 hacking
