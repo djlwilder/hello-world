@@ -19,3 +19,4 @@ script:
     - echo TRAVIS_ARCH = $TRAVIS_ARCH
     - echo TESTSUITE=$TESTSUITE
     - lscpu
+    - python --version
