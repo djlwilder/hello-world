@@ -13,7 +13,7 @@ os:
 
 addons:
   apt:
-    packages: python-pip 
+    packages: python-pip python-setuptools
 
 
 # before_install: ./.ci/${TRAVIS_OS_NAME}-setup.sh
