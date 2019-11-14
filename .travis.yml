@@ -1,4 +1,4 @@
-language: python
+language: c
 
 compiler:
   - gcc
@@ -18,4 +18,3 @@ script:
     - echo TRAVIS_ARCH = $TRAVIS_ARCH
     - python --version
     - pip -V
-    - pip install --disable-pip-version-check --user six flake8 hacking
