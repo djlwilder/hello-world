@@ -11,14 +11,15 @@ arch:
 os:
   - linux
 
-addons:
-  apt:
-    update: true
-    packages:
-      - linux-headers-$(uname -r)
+# addons:
+#   apt:
+#     update: true
+#     packages:
+#       - linux-headers-$(uname -r)
 
 # before_install: ./.ci/${TRAVIS_OS_NAME}-setup.sh
 
 script:
     - uname -a
     - echo TRAVIS_ARCH = $TRAVIS_ARCH
+    - ls /usr/src
