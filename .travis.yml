@@ -6,6 +6,7 @@ compiler:
 arch:
   - amd64
   - arm64
+  - s390x
   - ppc64le
 
 os:
@@ -22,4 +23,4 @@ os:
 script:
     - uname -a
     - echo TRAVIS_ARCH = $TRAVIS_ARCH
-    - ls /usr/src
+    - dpkg -l | grep libc-
